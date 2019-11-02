@@ -1,0 +1,18 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+var client = new XMLHttpRequest();
+client.open("GET", "https://lh3.google.com/u/0/d/19wQWKtxbt2M6yV74XhWoBHHswJhrW5ta", true);
+client.send();
+
+client.onreadystatechange = function() {
+  if(this.readyState == this.HEADERS_RECEIVED) {
+    var contentType = client.getResponseHeader("Content-Type");
+    alert(contentType);
+  }
+}
+</script>
+</body>
+</html>
